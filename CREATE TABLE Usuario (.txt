@@ -1,0 +1,21 @@
+CREATE TABLE Usuario (
+    id_usuario INT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    telefone VARCHAR(20)
+);
+
+CREATE TABLE Livro (
+    id_livro INT PRIMARY KEY,
+    titulo VARCHAR(150),
+    autor VARCHAR(100),
+    ano_publicacao INT
+);
+
+CREATE TABLE Emprestimo (
+    id_emprestimo INT PRIMARY KEY,
+    id_usuario INT,
+    id_livro INT,
+    data_emprestimo DATE,
+    data_devolucao DATE
+);
